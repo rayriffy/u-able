@@ -35,12 +35,7 @@ const Page: NextPage = (props) => {
 
   return (
     <Flex height='100%' align='center' justify='center'>
-      <Box
-        w={[22 / 24, 18 / 24, 14 / 24, 10 / 24]}
-        bg='white'
-        p={8}
-        borderRadius={8}
-        {...getShadow('xl')}>
+      <Box w={22 / 24} bg='white' p={8} borderRadius={8} {...getShadow('xl')}>
         <Heading pb={4}>
           {page !== 3 ? 'Register' : 'Identify verification'}
         </Heading>

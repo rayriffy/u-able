@@ -16,14 +16,19 @@
     "@chakra-ui/core": "^0.7.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@zeit/next-css": "^1.0.1",
     "babel-plugin-emotion": "^10.0.33",
     "emotion-theming": "^10.0.27",
     "next": "^9.3.5",
+    "next-compose-plugins": "^2.2.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-credit-cards": "^0.8.0",
+    "react-dom": "^16.13.1",
+    "react-lorem-component": "^0.13.0"
   },
   "devDependencies": {
     "@types/node": "^13.13.2",
+    "@types/react-credit-cards": "^0.8.0",
     "prettier": "^2.0.5",
     "tslint": "^6.1.1",
     "tslint-config-prettier": "^1.18.0",
