@@ -18,7 +18,7 @@ class NextApp extends App {
             body,
             #__next {
               height: 100%;
-              background: #2d3748;
+              background: #ffffff;
             }
           `}
         />

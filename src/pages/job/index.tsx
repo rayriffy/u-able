@@ -3,7 +3,6 @@ import React from 'react'
 import {
   AspectRatioBox,
   Box,
-  Button,
   Flex,
   Heading,
   Icon,
@@ -12,7 +11,6 @@ import {
   InputGroup,
   InputRightElement,
   PseudoBox,
-  Text,
 } from '@chakra-ui/core'
 import { NextPage } from 'next'
 import NextLink from 'next/link'
@@ -70,7 +68,7 @@ const Page: NextPage = (props) => {
                     transform: 'scale(1.05)',
                   }}
                   {...getShadow('lg')}>
-                  <AspectRatioBox ratio={4 / 3} minWidth={200} maxWidth={200}>
+                  <AspectRatioBox ratio={4 / 3} minWidth={125} maxWidth={125}>
                     <Image
                       src='https://api.kotori.love/pixiv/image/i.pximg.net/c/600x1200_90/img-master/img/2017/07/22/00/00/22/63981101_p0_master1200.jpg'
                       alt='pixiv'
