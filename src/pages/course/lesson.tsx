@@ -10,6 +10,7 @@ import {
   Text,
 } from '@chakra-ui/core'
 import { NextPage } from 'next'
+import NextLink from 'next/link'
 
 import { FooterUser } from '../../core/components/footerUser'
 import { NavUser } from '../../core/components/navUser'
@@ -51,6 +52,13 @@ const Page: NextPage = (props) => {
               Next
             </Button>
           </Flex>
+          {open + 1 === vids.length ? (
+            <Flex px={2}>
+              <NextLink href='/course/exam'>
+                <Button variantColor='orange'>Take test</Button>
+              </NextLink>
+            </Flex>
+          ) : null}
           <Box mx='auto' />
           <Text>{Math.floor((open * 100) / (vids.length - 1))}% complete</Text>
         </Flex>
@@ -61,12 +69,14 @@ const Page: NextPage = (props) => {
               <Box
                 py={3}
                 px={4}
+                cursor='pointer'
                 borderRadius={`${i === 0 ? '8px 8px' : '0px 0px'} ${
                   i === vids.length - 1 && open !== vids.length - 1
                     ? '8px 8px'
                     : '0px 0px'
                 }`}
                 overflow='hidden'
+                onClick={() => setOpen(i)}
                 transition='all 0.2s cubic-bezier(0.33, 1, 0.68, 1)'
                 bg={open === i ? 'blue.500' : 'white'}
                 color={open === i ? 'white' : 'black'}>

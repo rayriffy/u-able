@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 
 import {
   AspectRatioBox,
+  Avatar,
   Box,
   Button,
   Flex,
@@ -14,6 +15,7 @@ import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import Lorem from 'react-lorem-component'
 
+import { Course } from '../../core/components/course'
 import { FooterUser } from '../../core/components/footerUser'
 import { NavUser } from '../../core/components/navUser'
 
@@ -97,7 +99,66 @@ const Page: NextPage = (props) => {
             </Text>
           </Box>
         </Box>
-        OK
+        <Box py={4}>
+          <Box p={5}>
+            <Heading size='lg' pb={2}>
+              Reviews
+            </Heading>
+            <Flex wrap='wrap' align='center'>
+              {Array.from({ length: 4 }).map((_, i) => {
+                const rand = Math.floor(Math.random() * 100) % 5
+
+                return (
+                  <Box w={1 / 2} p={2} key={`course-review-${i}`}>
+                    <Box
+                      borderRadius={8}
+                      p={4}
+                      bg='white'
+                      overflow='hidden'
+                      {...getShadow('lg')}>
+                      <Flex align='center'>
+                        <Avatar
+                          size='sm'
+                          name='Kent Dodds'
+                          src='https://bit.ly/kent-c-dodds'
+                        />
+                        <Text fontWeight={500} pl={2}>
+                          Kent Dodds
+                        </Text>
+                      </Flex>
+                      <Flex align='center'>
+                        {Array.from({ length: 5 }).map((_, j) => (
+                          <Box
+                            pl={j === 0 ? undefined : 2}
+                            key={`course-star-${j}`}>
+                            <Icon
+                              name='star'
+                              color={`${j <= rand ? 'orange' : 'gray'}.400`}
+                            />
+                          </Box>
+                        ))}
+                      </Flex>
+                    </Box>
+                  </Box>
+                )
+              })}
+            </Flex>
+          </Box>
+        </Box>
+        <Box py={4}>
+          <Box p={5}>
+            <Heading size='lg' pb={2}>
+              Recommendations
+            </Heading>
+            <Flex wrap='wrap' align='center'>
+              {Array.from({ length: 4 }).map((_, i) => (
+                <Box w={1 / 2} p={2} key={`course-recommend-${i}`}>
+                  <Course title={`Course ${i + 1}`} />
+                </Box>
+              ))}
+            </Flex>
+          </Box>
+        </Box>
       </Box>
       <FooterUser />
     </React.Fragment>

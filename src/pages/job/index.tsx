@@ -3,6 +3,7 @@ import React from 'react'
 import {
   AspectRatioBox,
   Box,
+  Button,
   Flex,
   Heading,
   Icon,
@@ -10,12 +11,14 @@ import {
   Input,
   InputGroup,
   InputRightElement,
+  PseudoBox,
+  Text,
 } from '@chakra-ui/core'
 import { NextPage } from 'next'
+import NextLink from 'next/link'
 
-import { Course } from '../core/components/course'
-import { FooterUser } from '../core/components/footerUser'
-import { NavUser } from '../core/components/navUser'
+import { FooterUser } from '../../core/components/footerUser'
+import { NavUser } from '../../core/components/navUser'
 
 const Page: NextPage = (props) => {
   return (
@@ -25,7 +28,7 @@ const Page: NextPage = (props) => {
         <Box position='relative'>
           <AspectRatioBox ratio={16 / 8}>
             <Image
-              src='https://api.kotori.love/pixiv/image/i.pximg.net/c/600x1200_90/img-master/img/2020/04/21/00/47/43/80943778_p0_master1200.jpg'
+              src='https://api.kotori.love/pixiv/image/i.pximg.net/c/600x1200_90/img-master/img/2019/12/14/00/19/40/78279977_p0_master1200.jpg'
               alt='pixiv'
               objectFit='cover'
             />
@@ -39,7 +42,7 @@ const Page: NextPage = (props) => {
             bottom={0}
             left={0}
             right={0}>
-            <Heading color='white'>Courses</Heading>
+            <Heading color='white'>Jobs</Heading>
           </Flex>
         </Box>
         <Box p={6}>
@@ -49,17 +52,10 @@ const Page: NextPage = (props) => {
           </InputGroup>
         </Box>
         <Box px={6}>
-          <Heading size='lg'>Recommend courses</Heading>
-          <Flex py={4} wrap='wrap'>
-            {Array.from({ length: 10 }).map((_, i) => (
-              <Box w={1 / 2} p={3} key={`course-${i}`}>
-                <Course title={`Course ${i}`} />
-              </Box>
-            ))}
-          </Flex>
+          <Heading size='lg'>Recommend jobs</Heading>
         </Box>
       </Box>
-      <FooterUser />
+      <FooterUser job />
     </React.Fragment>
   )
 }
