@@ -21,7 +21,7 @@ class NextApp extends App {
             }
           `}
         />
-        <Box height='100%'>
+        <Box height='100%' bg='gray.100'>
           <Component {...pageProps} />
         </Box>
       </ThemeProvider>
