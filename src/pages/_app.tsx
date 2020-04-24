@@ -24,7 +24,7 @@ class NextApp extends App {
         />
         <Box
           height='100%'
-          maxWidth={520}
+          maxWidth={500}
           mx='auto'
           bg='gray.100'
           overflow='auto'

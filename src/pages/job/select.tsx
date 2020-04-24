@@ -77,7 +77,7 @@ const Page: NextPage = (props) => {
           <Button variantColor='blue'>Apply for this job</Button>
         </Flex>
       </Box>
-      <FooterUser job />
+      <FooterUser selected='job' />
     </React.Fragment>
   )
 }

@@ -107,7 +107,7 @@ const Page: NextPage = (props) => {
           )
         })}
       </Box>
-      <FooterUser />
+      <FooterUser selected='course' />
     </React.Fragment>
   )
 }

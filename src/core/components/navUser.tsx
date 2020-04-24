@@ -42,7 +42,9 @@ export const NavUser: React.FC = (props) => {
           </Flex>
         </MenuButton>
         <MenuList>
-          <MenuItem>Profile</MenuItem>
+          <NextLink href='/user/profile'>
+            <MenuItem>Profile</MenuItem>
+          </NextLink>
           <MenuItem>My Courses</MenuItem>
           <MenuDivider />
           <NextLink href='/'>

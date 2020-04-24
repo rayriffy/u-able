@@ -92,7 +92,7 @@ const Page: NextPage = (props) => {
           ))}
         </Box>
       </Box>
-      <FooterUser job />
+      <FooterUser selected='job' />
     </React.Fragment>
   )
 }

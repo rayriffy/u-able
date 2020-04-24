@@ -29,7 +29,7 @@ const Page: NextPage = (props) => {
           <FormLabel>Password</FormLabel>
           <Input type='password' id='pass' />
         </FormControl>
-        <Flex pt={2} justify='center' align='center'>
+        <Flex pt={2} align='center'>
           <NextLink href='/home'>
             <Button variantColor='blue'>Login</Button>
           </NextLink>
