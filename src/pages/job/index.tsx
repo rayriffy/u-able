@@ -16,9 +16,12 @@ import {
 } from '@chakra-ui/core'
 import { NextPage } from 'next'
 import NextLink from 'next/link'
+import Lorem from 'react-lorem-component'
 
 import { FooterUser } from '../../core/components/footerUser'
 import { NavUser } from '../../core/components/navUser'
+
+import { getShadow } from '../../core/services/getShadow'
 
 const Page: NextPage = (props) => {
   return (
@@ -53,6 +56,42 @@ const Page: NextPage = (props) => {
         </Box>
         <Box px={6}>
           <Heading size='lg'>Recommend jobs</Heading>
+          {Array.from({ length: 10 }).map((_, i) => (
+            <Box key={`job-${i}`} p={4}>
+              <NextLink href='/job/select'>
+                <PseudoBox
+                  bg='white'
+                  borderRadius={8}
+                  display='flex'
+                  cursor='pointer'
+                  overflow='hidden'
+                  transition='all 0.5s cubic-bezier(0.22, 1, 0.36, 1)'
+                  _hover={{
+                    transform: 'scale(1.05)',
+                  }}
+                  {...getShadow('lg')}>
+                  <AspectRatioBox ratio={4 / 3} minWidth={200} maxWidth={200}>
+                    <Image
+                      src='https://api.kotori.love/pixiv/image/i.pximg.net/c/600x1200_90/img-master/img/2017/07/22/00/00/22/63981101_p0_master1200.jpg'
+                      alt='pixiv'
+                      objectFit='cover'
+                    />
+                  </AspectRatioBox>
+                  <Box p={4}>
+                    <Heading size='md'>Job name {i}</Heading>
+                    <Box>
+                      <Lorem
+                        count={1}
+                        seed={i}
+                        paragraphUpperBound={1}
+                        paragraphLowerBound={1}
+                      />
+                    </Box>
+                  </Box>
+                </PseudoBox>
+              </NextLink>
+            </Box>
+          ))}
         </Box>
       </Box>
       <FooterUser job />
