@@ -1,11 +1,16 @@
 import React from 'react'
 
 import { Avatar, Box, Flex, Heading, Text } from '@chakra-ui/core'
+import NextLink from 'next/link'
 
 export const NavUser: React.FC = (props) => {
   return (
     <Flex py={3} px={4} align='center' bg='white'>
-      <Heading size='sm'>U-Able</Heading>
+      <NextLink href='/home'>
+        <Heading cursor='pointer' size='sm'>
+          U-Able
+        </Heading>
+      </NextLink>
       <Box mx='auto' />
       <Flex align='center'>
         <Text fontSize='md' pr={2}>

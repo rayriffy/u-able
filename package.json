@@ -24,11 +24,13 @@
     "react": "^16.13.1",
     "react-credit-cards": "^0.8.0",
     "react-dom": "^16.13.1",
-    "react-lorem-component": "^0.13.0"
+    "react-lorem-component": "^0.13.0",
+    "react-youtube": "^7.11.2"
   },
   "devDependencies": {
     "@types/node": "^13.13.2",
     "@types/react-credit-cards": "^0.8.0",
+    "@types/react-youtube": "^7.6.2",
     "prettier": "^2.0.5",
     "tslint": "^6.1.1",
     "tslint-config-prettier": "^1.18.0",

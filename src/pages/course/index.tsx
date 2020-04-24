@@ -8,14 +8,10 @@ import {
   Heading,
   Icon,
   Image,
-  Input,
-  InputGroup,
-  InputRightElement,
-  PseudoBox,
   Text,
 } from '@chakra-ui/core'
 import { NextPage } from 'next'
-import NextLink from 'next/link'
+import { useRouter } from 'next/router'
 import Lorem from 'react-lorem-component'
 
 import { FooterUser } from '../../core/components/footerUser'
@@ -25,6 +21,8 @@ import { getShadow } from '../../core/services/getShadow'
 
 const Page: NextPage = (props) => {
   const rand = useMemo(() => Math.floor(Math.random() * 100) % 5, [])
+
+  const router = useRouter()
 
   return (
     <React.Fragment>
@@ -69,12 +67,14 @@ const Page: NextPage = (props) => {
           </Flex>
           <Box mx='auto' />
           <Flex justify='center' wrap='wrap'>
-            <Text pb={1}>999 Baht</Text>
-            <NextLink href='/course/checkout'>
-              <Button w='100%' size='sm' variantColor='green'>
-                Purchase
-              </Button>
-            </NextLink>
+            <Text pb={1}>999 THB</Text>
+            <Button
+              w='100%'
+              size='sm'
+              variantColor='green'
+              onClick={() => router.push('/course/checkout')}>
+              Purchase
+            </Button>
           </Flex>
         </Flex>
         <Box py={4}>
