@@ -14,10 +14,10 @@ import {
 } from '@chakra-ui/core'
 import NextLink from 'next/link'
 
-export const NavUser: React.FC = (props) => {
+export const NavRecruit: React.FC = (props) => {
   return (
     <Flex py={3} px={4} align='center' bg='white'>
-      <NextLink href='/home'>
+      <NextLink href='/recruiter/home'>
         <Heading cursor='pointer' size='sm'>
           U-Able
         </Heading>
@@ -32,20 +32,16 @@ export const NavUser: React.FC = (props) => {
           _focus={{ outline: 0, boxShadow: 'outline' }}>
           <Flex align='center'>
             <Text fontSize='md' pr={2}>
-              John Doe
+              Umbrella Co.,Ltd.
             </Text>
             <Avatar
               size='sm'
-              name='Dan Abrahmov'
-              src='https://bit.ly/dan-abramov'
+              name='Prosper Otemuyiwa'
+              src='https://bit.ly/prosper-baba'
             />
           </Flex>
         </MenuButton>
         <MenuList>
-          <NextLink href='/user/profile'>
-            <MenuItem>Profile</MenuItem>
-          </NextLink>
-          <MenuDivider />
           <NextLink href='/'>
             <MenuItem>Sign out</MenuItem>
           </NextLink>

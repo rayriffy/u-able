@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import {
   Box,
@@ -17,20 +17,26 @@ import NextLink from 'next/link'
 import { getShadow } from '../core/services/getShadow'
 
 const Page: NextPage = (props) => {
+  const [user, setUser] = useState('')
+
+  const handleUserInput = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+    setUser(target.value)
+  }
+
   return (
     <Flex height='100%' align='center' justify='center'>
       <Box w={22 / 24} bg='white' p={8} borderRadius={8} {...getShadow('xl')}>
         <Heading pb={4}>Login</Heading>
         <FormControl>
           <FormLabel>Username</FormLabel>
-          <Input type='text' id='user' />
+          <Input type='text' id='user' onChange={handleUserInput} />
         </FormControl>
         <FormControl py={3}>
           <FormLabel>Password</FormLabel>
           <Input type='password' id='pass' />
         </FormControl>
         <Flex pt={2} align='center'>
-          <NextLink href='/home'>
+          <NextLink href={user === 'umb' ? `/recruiter/home` : `/home`}>
             <Button variantColor='blue'>Login</Button>
           </NextLink>
           <Box pl={4}>
