@@ -15,11 +15,13 @@ import { NextPage } from 'next'
 
 import { Course } from '../core/components/course'
 import { FooterUser } from '../core/components/footerUser'
+import { HeadTitle } from '../core/components/headTitle'
 import { NavUser } from '../core/components/navUser'
 
 const Page: NextPage = (props) => {
   return (
     <React.Fragment>
+      <HeadTitle title='Dashboard' />
       <NavUser />
       <Box pb={16}>
         <Box position='relative'>

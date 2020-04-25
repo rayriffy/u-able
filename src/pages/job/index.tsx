@@ -17,6 +17,7 @@ import NextLink from 'next/link'
 import Lorem from 'react-lorem-component'
 
 import { FooterUser } from '../../core/components/footerUser'
+import { HeadTitle } from '../../core/components/headTitle'
 import { NavUser } from '../../core/components/navUser'
 
 import { getShadow } from '../../core/services/getShadow'
@@ -24,6 +25,7 @@ import { getShadow } from '../../core/services/getShadow'
 const Page: NextPage = (props) => {
   return (
     <React.Fragment>
+      <HeadTitle title={['Job', 'Listing']} />
       <NavUser />
       <Box pb={16}>
         <Box position='relative'>

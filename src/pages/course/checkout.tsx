@@ -17,6 +17,7 @@ import NextLink from 'next/link'
 import { CreditCard } from '../../core/components/creditCard'
 
 import { FooterUser } from '../../core/components/footerUser'
+import { HeadTitle } from '../../core/components/headTitle'
 import { NavUser } from '../../core/components/navUser'
 
 import { getShadow } from '../../core/services/getShadow'
@@ -26,6 +27,7 @@ const Page: NextPage = (props) => {
 
   return (
     <React.Fragment>
+      <HeadTitle title={['Course', 'Checkout']} />
       <NavUser />
       <Box pb={16} px={6}>
         <Collapse isOpen={!isPurchase} p={4}>

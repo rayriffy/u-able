@@ -14,6 +14,7 @@ import NextLink from 'next/link'
 import Reward from 'react-rewards'
 
 import { FooterUser } from '../../core/components/footerUser'
+import { HeadTitle } from '../../core/components/headTitle'
 import { NavUser } from '../../core/components/navUser'
 
 const Page: NextPage = (props) => {
@@ -29,6 +30,7 @@ const Page: NextPage = (props) => {
 
   return (
     <React.Fragment>
+      <HeadTitle title={['Course', 'Test', 'Result']} />
       <NavUser />
       <Box pb={16} px={6}>
         <Flex justify='center' pt={24} pb={4}>

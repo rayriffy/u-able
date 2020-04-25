@@ -13,6 +13,7 @@ import { NextPage } from 'next'
 import NextLink from 'next/link'
 
 import { FooterUser } from '../../core/components/footerUser'
+import { HeadTitle } from '../../core/components/headTitle'
 import { NavUser } from '../../core/components/navUser'
 
 const Page: NextPage = (props) => {
@@ -32,6 +33,7 @@ const Page: NextPage = (props) => {
 
   return (
     <React.Fragment>
+      <HeadTitle title={['Course', 'Lesson']} />
       <NavUser />
       <Box pb={24} px={6}>
         <Heading pt={4}>Course name</Heading>

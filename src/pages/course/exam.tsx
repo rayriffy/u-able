@@ -14,6 +14,7 @@ import { useRouter } from 'next/router'
 import Lorem from 'react-lorem-component'
 
 import { FooterUser } from '../../core/components/footerUser'
+import { HeadTitle } from '../../core/components/headTitle'
 import { NavUser } from '../../core/components/navUser'
 
 const Page: NextPage = (props) => {
@@ -31,6 +32,7 @@ const Page: NextPage = (props) => {
 
   return (
     <React.Fragment>
+      <HeadTitle title={['Course', 'Test']} />
       <NavUser />
       <Box pb={16} px={6}>
         <Heading pt={6}>Course name</Heading>

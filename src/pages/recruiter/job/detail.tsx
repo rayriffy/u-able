@@ -14,6 +14,7 @@ import { NextPage } from 'next'
 import NextLink from 'next/link'
 
 import { FooterRecruit } from '../../../core/components/footerRecruit'
+import { HeadTitle } from '../../../core/components/headTitle'
 import { NavRecruit } from '../../../core/components/navRecruit'
 
 import { getShadow } from '../../../core/services/getShadow'
@@ -21,6 +22,7 @@ import { getShadow } from '../../../core/services/getShadow'
 const Page: NextPage = (props) => {
   return (
     <React.Fragment>
+      <HeadTitle title={['Job', 'Detail']} />
       <NavRecruit />
       <Box pb={16} px={8}>
         <Heading pt={8}>The position name</Heading>

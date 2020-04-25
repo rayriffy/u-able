@@ -1,29 +1,12 @@
 import React, { useState } from 'react'
 
-import {
-  AspectRatioBox,
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Icon,
-  Image,
-  Input,
-  InputGroup,
-  InputRightElement,
-  PseudoBox,
-  Stack,
-  Tag,
-  Text,
-} from '@chakra-ui/core'
+import { Box, Button, Flex } from '@chakra-ui/core'
 import { NextPage } from 'next'
-import NextLink from 'next/link'
 
 import { FooterRecruit } from '../../core/components/footerRecruit'
+import { HeadTitle } from '../../core/components/headTitle'
 import { NavRecruit } from '../../core/components/navRecruit'
 import { Profile } from '../../core/components/profile'
-
-import { getShadow } from '../../core/services/getShadow'
 
 const Page: NextPage = (props) => {
   const [status, setStatus] = useState<string>('')
@@ -37,6 +20,7 @@ const Page: NextPage = (props) => {
 
   return (
     <React.Fragment>
+      <HeadTitle title={['Recruitment', 'Candidate']} />
       <NavRecruit />
       <Box pb={24}>
         <Profile />

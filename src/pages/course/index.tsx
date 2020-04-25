@@ -17,6 +17,7 @@ import Lorem from 'react-lorem-component'
 
 import { Course } from '../../core/components/course'
 import { FooterUser } from '../../core/components/footerUser'
+import { HeadTitle } from '../../core/components/headTitle'
 import { NavUser } from '../../core/components/navUser'
 
 import { getShadow } from '../../core/services/getShadow'
@@ -28,6 +29,7 @@ const Page: NextPage = (props) => {
 
   return (
     <React.Fragment>
+      <HeadTitle title={['Course', 'Detail']} />
       <NavUser />
       <Box pb={16} px={6}>
         <Box py={4}>

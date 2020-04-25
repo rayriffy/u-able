@@ -18,6 +18,7 @@ import NextLink from 'next/link'
 import Reward from 'react-rewards'
 
 import { FooterRecruit } from '../../../core/components/footerRecruit'
+import { HeadTitle } from '../../../core/components/headTitle'
 import { NavRecruit } from '../../../core/components/navRecruit'
 import { Profile } from '../../../core/components/profile'
 
@@ -49,6 +50,7 @@ const Page: NextPage = (props) => {
 
   return (
     <React.Fragment>
+      <HeadTitle title={['Job', 'Candidate']} />
       <NavRecruit />
       <Box pb={16}>
         <Collapse isOpen={!status.startsWith('done')}>

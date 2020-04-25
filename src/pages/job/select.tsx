@@ -14,6 +14,7 @@ import { NextPage } from 'next'
 import Lorem from 'react-lorem-component'
 
 import { FooterUser } from '../../core/components/footerUser'
+import { HeadTitle } from '../../core/components/headTitle'
 import { NavUser } from '../../core/components/navUser'
 
 import { getShadow } from '../../core/services/getShadow'
@@ -21,6 +22,7 @@ import { getShadow } from '../../core/services/getShadow'
 const Page: NextPage = (props) => {
   return (
     <React.Fragment>
+      <HeadTitle title={['Job', 'Detail']} />
       <NavUser />
       <Box pb={20} px={6}>
         <Box py={4}>
@@ -83,5 +85,3 @@ const Page: NextPage = (props) => {
 }
 
 export default Page
-
-// https://api.kotori.love/pixiv/image/i.pximg.net/c/600x1200_90/img-master/img/2020/04/22/23/09/59/80986748_p0_master1200.jpg
