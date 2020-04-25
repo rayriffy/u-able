@@ -3,7 +3,6 @@ import React from 'react'
 import {
   AspectRatioBox,
   Box,
-  Button,
   Flex,
   Heading,
   Icon,
@@ -12,7 +11,6 @@ import {
   InputGroup,
   InputRightElement,
   PseudoBox,
-  Stack,
   Tag,
   Text,
 } from '@chakra-ui/core'
