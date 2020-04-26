@@ -9,6 +9,7 @@ import {
   Heading,
   Icon,
   Image,
+  Link,
   Text,
 } from '@chakra-ui/core'
 import { NextPage } from 'next'
@@ -72,13 +73,19 @@ const Page: NextPage = (props) => {
           <Box mx='auto' />
           <Flex justify='center' wrap='wrap'>
             <Text pb={1}>999 THB</Text>
-            <Button
-              w='100%'
-              size='sm'
-              variantColor='green'
-              onClick={() => router.push('/course/checkout')}>
-              Purchase
-            </Button>
+            <Box w='100%'>
+              <Link href='/course/checkout' textDecoration='none'>
+                <Button
+                  w='100%'
+                  size='sm'
+                  variantColor='green'
+                  _hover={{
+                    textDecoration: 'none',
+                  }}>
+                  Purchase
+                </Button>
+              </Link>
+            </Box>
           </Flex>
         </Flex>
         <Box py={4}>

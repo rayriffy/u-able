@@ -90,7 +90,7 @@ const Page: NextPage = (props) => {
           </Flex>
         </Box>
         <Box px={12} pt={5}>
-          <NextLink href='/job/select'>
+          <NextLink href='/course/related'>
             <Button variantColor='blue' w='100%'>
               Cool!{' '}
               {review === 0

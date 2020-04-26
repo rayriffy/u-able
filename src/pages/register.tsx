@@ -23,7 +23,7 @@ import { HeadTitle } from '../core/components/headTitle'
 import { getShadow } from '../core/services/getShadow'
 
 const Page: NextPage = (props) => {
-  const [selected, setSelected] = useState<string>('')
+  const [selected, setSelected] = useState<'left' | 'right' | ''>('')
   const [page, setPage] = useState<number>(1)
   const [status, setStatus] = useState<string>('')
 
@@ -63,7 +63,7 @@ const Page: NextPage = (props) => {
               </Button>
             </Flex>
             {selected !== '' ? <Divider pt={2} /> : null}
-            <Collapse isOpen={selected !== '' && page === 1}>
+            <Collapse isOpen={selected === 'right' && page === 1}>
               <FormControl>
                 <FormLabel>Full name</FormLabel>
                 <Input type='text' />
@@ -85,7 +85,7 @@ const Page: NextPage = (props) => {
                 </Button>
               </Flex>
             </Collapse>
-            <Collapse isOpen={page === 2}>
+            <Collapse isOpen={selected === 'right' && page === 2}>
               <Flex>
                 <FormControl w={1 / 2} pr={2}>
                   <FormLabel>Age</FormLabel>
@@ -132,7 +132,7 @@ const Page: NextPage = (props) => {
               </FormControl>
               <Flex justify='center' pt={4}>
                 <Button
-                  onClick={() => setPage(2)}
+                  onClick={() => setPage(selected === 'left' ? 1 : 2)}
                   isDisabled={status === 'process'}>
                   Previous
                 </Button>
@@ -143,6 +143,28 @@ const Page: NextPage = (props) => {
                   isLoading={status === 'process'}
                   isDisabled={status === 'process'}>
                   Submit
+                </Button>
+              </Flex>
+            </Collapse>
+            <Collapse
+              isOpen={selected === 'left' && (page === 1 || page === 2)}>
+              <FormControl>
+                <FormLabel>Company Name</FormLabel>
+                <Input type='text' />
+              </FormControl>
+              <FormControl py={2}>
+                <FormLabel>Company Description</FormLabel>
+                <Textarea />
+              </FormControl>
+              <FormControl>
+                <FormLabel>Address</FormLabel>
+                <Textarea />
+              </FormControl>
+              <Flex justify='center' pt={4}>
+                <Button isDisabled>Previous</Button>
+                <Box px={2} />
+                <Button variantColor='blue' onClick={() => setPage(3)}>
+                  Next
                 </Button>
               </Flex>
             </Collapse>
