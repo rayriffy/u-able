@@ -14,13 +14,15 @@ import {
 } from '@chakra-ui/core'
 import NextLink from 'next/link'
 
+import { Logo } from './logo'
+
 export const NavRecruit: React.FC = (props) => {
   return (
     <Flex py={3} px={4} align='center' bg='white'>
       <NextLink href='/recruiter/home'>
-        <Heading cursor='pointer' size='sm'>
-          U-Able
-        </Heading>
+        <Box>
+          <Logo />
+        </Box>
       </NextLink>
       <Box mx='auto' />
       <Menu>
