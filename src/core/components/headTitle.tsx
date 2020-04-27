@@ -13,9 +13,9 @@ export const HeadTitle: React.FC<IProps> = (props) => {
     <Head>
       <title>
         {title
-          ? `${
+          ? `U-Able · New Hope | ${
               typeof title === 'string' ? title : title.join(' · ')
-            } | U-Able · New Hope`
+            }`
           : 'U-Able · New Hope'}
       </title>
     </Head>
