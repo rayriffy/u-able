@@ -13,8 +13,10 @@ export const HeadTitle: React.FC<IProps> = (props) => {
     <Head>
       <title>
         {title
-          ? `${typeof title === 'string' ? title : title.join(' · ')} | U-Able`
-          : 'U-Able'}
+          ? `${
+              typeof title === 'string' ? title : title.join(' · ')
+            } | U-Able · New Hope`
+          : 'U-Able · New Hope'}
       </title>
     </Head>
   )
